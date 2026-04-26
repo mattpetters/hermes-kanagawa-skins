@@ -38,7 +38,7 @@ THRESHOLD = 130
 
 # Gradient stops mirror the wave hero's color flow per palette
 PALETTES = {
-    "paper": [   # foam → wave teal → deep blue
+    "canvas": [   # foam → wave teal → deep blue
         "#7E8FAF",  # canvasTeal1 (crest highlight)
         "#6B8998",  # canvasBlue2 (wave body)
         "#516E7D",  # canvasBlue4 (deep water)
@@ -105,7 +105,7 @@ def render_variant(text: str, palette_name: str):
 def strip_markup(s): return re.sub(r"\[/?[^\]]*\]", "", s)
 
 for vname, vtext in VARIANTS.items():
-    for palette_name in ("paper","ink"):
+    for palette_name in ("canvas","ink"):
         rows = render_variant(vtext, palette_name)
         body = "\n".join(rows)
         (OUTDIR / f"banner_{vname}_{palette_name}.txt").write_text(body)

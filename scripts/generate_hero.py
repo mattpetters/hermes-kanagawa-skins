@@ -1,5 +1,5 @@
 """Generate palette-quantized colored braille ASCII of Hokusai's wave for both
-kanagawa-paper skins (canvas + ink). Outputs Rich markup files into
+Hermes skins (kanagawa-canvas + kanagawa-ink). Outputs Rich markup files into
 assets/previews/.
 
 Tunables: COLS, ROWS, THRESHOLD, palettes.
@@ -106,10 +106,10 @@ def render(palette_hex, dark_on_light=True, threshold=128, invert_color=False):
         lines.append("".join(out))
     return lines
 
-paper_lines = render(CANVAS_PALETTE, dark_on_light=True, threshold=130)
+canvas_lines = render(CANVAS_PALETTE, dark_on_light=True, threshold=130)
 ink_lines   = render(INK_PALETTE,    dark_on_light=True, threshold=130, invert_color=True)
 
-PAPER_CAPTION = [
+CANVAS_CAPTION = [
     "[bold #73787D]                  神 奈 川 沖 浪 裏[/]",
     "[dim #8E8A80]                  The Great Wave · 葛飾北斎[/]",
 ]
@@ -118,17 +118,17 @@ INK_CAPTION = [
     "[dim #54546D]                  The Great Wave · 葛飾北斎[/]",
 ]
 
-paper_block = "\n".join(paper_lines + PAPER_CAPTION)
+canvas_block = "\n".join(canvas_lines + CANVAS_CAPTION)
 ink_block   = "\n".join(ink_lines   + INK_CAPTION)
 
-(OUTDIR / "paper_hero.txt").write_text(paper_block)
+(OUTDIR / "canvas_hero.txt").write_text(canvas_block)
 (OUTDIR / "ink_hero.txt").write_text(ink_block)
 
 def strip_markup(s):
     return re.sub(r"\[/?[^\]]*\]", "", s)
 
-(OUTDIR / "paper_hero.plain.txt").write_text(strip_markup(paper_block))
+(OUTDIR / "canvas_hero.plain.txt").write_text(strip_markup(canvas_block))
 (OUTDIR / "ink_hero.plain.txt").write_text(strip_markup(ink_block))
 
-print(f"wrote {OUTDIR/'paper_hero.txt'} ({len(paper_lines)+2} lines)")
+print(f"wrote {OUTDIR/'canvas_hero.txt'} ({len(canvas_lines)+2} lines)")
 print(f"wrote {OUTDIR/'ink_hero.txt'} ({len(ink_lines)+2} lines)")

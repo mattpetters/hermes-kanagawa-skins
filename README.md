@@ -7,8 +7,11 @@ colorscheme.
 
 - **`kanagawa-ink`** — dark theme. Sumi-ink background (`#1F1F28`), `dragonYellow`
   primary accent, fuji-white text.
-- **`kanagawa-paper`** — light theme. Canvas off-white background (`#E1E1DE`),
+- **`kanagawa-canvas`** — light theme. Canvas off-white background (`#E1E1DE`),
   muted teal accent (`canvasTeal1`), ink-toned text.
+
+![kanagawa-ink](assets/screenshots/kanagawa-ink.svg)
+![kanagawa-canvas](assets/screenshots/kanagawa-canvas.svg)
 
 Each skin ships with two pieces of custom ASCII art:
 
@@ -53,9 +56,14 @@ theme = dark:kanagawa-paper-ink,light:kanagawa-paper-canvas
 
 ## What it looks like
 
-Plain previews live in `assets/previews/*.plain.txt`. Colored Rich-markup
-versions are alongside (`*.txt`) — render them with `rich.print(open(...).read())`
-or just open the active skin in Hermes.
+Plain text previews live in `assets/previews/*.plain.txt`. Colored Rich-markup
+sources (`*.txt`) and rendered SVGs (`assets/screenshots/*.svg`) are alongside.
+
+Regenerate the SVG screenshots:
+
+```bash
+python3 scripts/render_screenshots.py
+```
 
 ## Repository layout
 
@@ -63,22 +71,26 @@ or just open the active skin in Hermes.
 .
 ├── skins/
 │   ├── kanagawa-ink.yaml         # dark variant
-│   └── kanagawa-paper.yaml       # light variant
+│   └── kanagawa-canvas.yaml       # light variant
 ├── scripts/
 │   ├── install.sh                # copy skins into $HERMES_HOME/skins
 │   ├── regenerate.sh             # full pipeline: hero + logo + inject
 │   ├── generate_hero.py          # quantize Hokusai image to braille per palette
 │   ├── generate_logo.py          # half-block kanji banner with gradient
-│   └── inject_art.py             # rewrite banner_logo / banner_hero in YAMLs
-├── assets/
-│   ├── source/
-│   │   └── hokusai_great_wave.jpg  # Wikimedia public-domain source
-│   └── previews/
-│       ├── paper_hero.txt
-│       ├── ink_hero.txt
-│       ├── banner_A_kanji_en_{paper,ink}.txt   # 神奈川-AGENT  (active)
-│       ├── banner_B_full_jp_{paper,ink}.txt    # 神奈川エージェント
-│       └── banner_C_hermes_{paper,ink}.txt     # ヘルメス-神奈川
+│   ├── inject_art.py             # rewrite banner_logo / banner_hero in YAMLs
+│   └── render_screenshots.py     # SVG previews of each skin via Rich
+└── assets/
+    ├── source/
+    │   └── hokusai_great_wave.jpg  # Wikimedia public-domain source
+    ├── screenshots/                # SVG renders of each active skin
+    │   ├── kanagawa-canvas.svg
+    │   └── kanagawa-ink.svg
+    └── previews/
+        ├── canvas_hero.txt
+        ├── ink_hero.txt
+        ├── banner_A_kanji_en_{canvas,ink}.txt   # 神奈川-AGENT  (active)
+        ├── banner_B_full_jp_{canvas,ink}.txt    # 神奈川エージェント
+        └── banner_C_hermes_{canvas,ink}.txt     # ヘルメス-神奈川
 └── docs/
     └── PALETTE.md                # canvas + ink palette reference
 ```

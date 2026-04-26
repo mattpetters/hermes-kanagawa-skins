@@ -1,5 +1,5 @@
 name: kanagawa-ink
-description: Kanagawa Paper (Ink) — dark theme matching upstream kanagawa-paper.nvim ink variant (sumiInk3 background with dragon palette accents)
+description: Kanagawa Ink — dark theme ported from kanagawa-paper.nvim ink variant (sumiInk3 background with dragon palette accents)
 
 # Palette reference (upstream kanagawa-paper ink):
 #   sumiInk3 bg   #1F1F28   sumiInk1     #181820
@@ -56,7 +56,7 @@ spinner: {}
 
 branding:
   agent_name: "Hermes Agent"
-  welcome: "ようこそ — Kanagawa Paper · Ink. Type your message or /help."
+  welcome: "ようこそ — Kanagawa Ink. Type your message or /help."
   goodbye: "またね 〜 ⚕"
   response_label: " ⚕ Hermes "
   prompt_symbol: "❯ "

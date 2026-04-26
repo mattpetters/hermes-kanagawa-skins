@@ -7,7 +7,7 @@ canvas (light) and ink (dark) themes. Sources:
 - `lua/kanagawa-paper/themes/canvas.lua` — light theme bindings
 - `lua/kanagawa-paper/themes/ink.lua`    — dark theme bindings
 
-## Canvas (light) — used by `kanagawa-paper`
+## Canvas (light) — used by `kanagawa-canvas`
 
 | Role                | Hex       | Palette name      |
 |---------------------|-----------|-------------------|

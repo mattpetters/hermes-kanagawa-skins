@@ -16,7 +16,7 @@ INJECT_VARIANT = "A_kanji_en"
 
 PAIRS = (
     # (skin_filename, logo_preview, hero_preview)
-    ("kanagawa-paper.yaml", f"banner_{INJECT_VARIANT}_paper.txt", "paper_hero.txt"),
+    ("kanagawa-canvas.yaml", f"banner_{INJECT_VARIANT}_canvas.txt", "canvas_hero.txt"),
     ("kanagawa-ink.yaml",   f"banner_{INJECT_VARIANT}_ink.txt",   "ink_hero.txt"),
 )
 

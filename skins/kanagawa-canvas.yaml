@@ -1,5 +1,5 @@
-name: kanagawa-paper
-description: Kanagawa Paper (Canvas) — light theme matching upstream kanagawa-paper.nvim canvas variant (cool off-white canvas with muted teal accents)
+name: kanagawa-canvas
+description: Kanagawa Canvas — light theme ported from kanagawa-paper.nvim canvas variant (cool off-white canvas with muted teal accents)
 
 # Palette reference (upstream kanagawa-paper canvas):
 #   canvas bg     #E1E1DE   bg_dim       #D8D8D2
@@ -56,7 +56,7 @@ spinner: {}
 
 branding:
   agent_name: "Hermes Agent"
-  welcome: "ようこそ — Kanagawa Paper · Canvas. Type your message or /help."
+  welcome: "ようこそ — Kanagawa Canvas. Type your message or /help."
   goodbye: "またね 〜 ⚕"
   response_label: " ⚕ Hermes "
   prompt_symbol: "❯ "

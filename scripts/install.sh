@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-# Install the kanagawa-paper and kanagawa-ink skins into your Hermes profile.
+# Install the kanagawa-canvas and kanagawa-ink skins into your Hermes profile.
 # Idempotent: re-running just refreshes the YAML files.
 #
 # Usage:
@@ -13,7 +13,7 @@ DEST="${HERMES_HOME:-$HOME/.hermes}/skins"
 
 mkdir -p "$DEST"
 
-for skin in kanagawa-paper kanagawa-ink; do
+for skin in kanagawa-canvas kanagawa-ink; do
   src="$ROOT/skins/$skin.yaml"
   dst="$DEST/$skin.yaml"
   cp "$src" "$dst"
@@ -24,7 +24,7 @@ cat <<'EOF'
 
 Installed. To activate:
 
-  /skin kanagawa-paper      # light · canvas variant
+  /skin kanagawa-canvas      # light · canvas variant
   /skin kanagawa-ink        # dark  · ink variant
 
 Or set as default in ~/.hermes/config.yaml:
