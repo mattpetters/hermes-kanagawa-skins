@@ -1,0 +1,97 @@
+name: kanagawa-paper
+description: Kanagawa Paper (Canvas) — light theme matching upstream kanagawa-paper.nvim canvas variant (cool off-white canvas with muted teal accents)
+
+# Palette reference (upstream kanagawa-paper canvas):
+#   canvas bg     #E1E1DE   bg_dim       #D8D8D2
+#   bg_p1         #E6E6E3   bg_p2        #ECECE8
+#   bg_statusline #D1CFC5   bg_visual    #D4CDD4
+#   fg            #73787D   fg_dim       #8E8A80   fg_dimmer #AEAEA6
+#   teal1 (acc1)  #7E8FAF   orange1      #B28D77   aqua1     #7B958E
+#   red1          #C27672   green2       #7A8C6A   yellow1   #A7956A
+#   blue2         #6B8998   violet1      #7880A5   pink1     #9E7E98
+#   green3        #9BA98E   blue4        #516E7D
+
+colors:
+  # Banner — sumi ink calligraphy on canvas with teal seal + akafuji red
+  banner_border: "#7E8FAF"      # canvasTeal1
+  banner_title:  "#73787D"      # canvasGray3 (ink-toned fg)
+  banner_accent: "#C27672"      # canvasRed1 (akafuji)
+  banner_dim:    "#8E8A80"      # canvasGray2
+  banner_text:   "#73787D"
+
+  # Core UI
+  ui_accent: "#7E8FAF"          # canvasTeal1
+  ui_label:  "#7880A5"          # canvasViolet1
+  ui_ok:     "#7A8C6A"          # canvasGreen2
+  ui_error:  "#C27672"          # canvasRed1
+  ui_warn:   "#B28D77"          # canvasOrange1
+
+  # Prompt + rules
+  prompt:          "#73787D"
+  input_rule:      "#AEAEA6"    # canvasGray1 (subtle divider)
+  response_border: "#7E8FAF"
+
+  # Session header
+  session_label:  "#7E8FAF"
+  session_border: "#8E8A80"
+
+  # Status bar (canvasWhite2 panel — sits above canvas bg)
+  status_bar_bg:       "#D1CFC5"
+  status_bar_text:     "#73787D"
+  status_bar_strong:   "#7E8FAF"
+  status_bar_dim:      "#8E8A80"
+  status_bar_good:     "#7A8C6A"
+  status_bar_warn:     "#B28D77"
+  status_bar_bad:      "#C27672"
+  status_bar_critical: "#C27672"
+
+  # Voice / completion menus
+  voice_status_bg:                  "#D1CFC5"
+  completion_menu_bg:               "#ECECE8"
+  completion_menu_current_bg:       "#D8D8D2"
+  completion_menu_meta_bg:          "#E6E6E3"
+  completion_menu_meta_current_bg:  "#D1CFC5"
+
+spinner: {}
+
+branding:
+  agent_name: "Hermes Agent"
+  welcome: "ようこそ — Kanagawa Paper · Canvas. Type your message or /help."
+  goodbye: "またね 〜 ⚕"
+  response_label: " ⚕ Hermes "
+  prompt_symbol: "❯ "
+  help_header: "(^_^)? Available Commands"
+
+tool_prefix: "│"
+
+# Block-letter banner — 神奈川-AGENT (Kanagawa Agent)
+banner_logo: |
+  [bold #7E8FAF]     ██      ██            ▄█▀           ▄▄         ▄▄               ▄▄▄           ▄▄▄▄▄     ▄▄▄▄▄▄▄▄▄▄   ▄▄▄       ▄▄ ▄▄▄▄▄▄▄▄▄▄▄▄[/]
+  [bold #7E8FAF]   ▄▄██▄▄▄▄▄▄██▄▄▄▄  ████████████████    ██   ██    ██              ████▄       ▄███▀▀▀███   ███▀▀▀▀▀▀▀   ████      ██ ▀▀▀▀▀███▀▀▀▀[/]
+  [bold #7E8FAF]   ▀▀▀▀████▀▀██▀▀██     ▄██▀  ▀██▄       ██   ██    ██             ▄██ ██      ▄██▀     ▀█▀  ███          █████▄    ██      ███[/]
+  [bold #7E8FAF]      ██ ██▄▄██▄▄██  ▄▄█████████████▄    ██   ██    ██             ██  ███     ███           ███          ███ ██▄   ██      ███[/]
+  [bold #6B8998]    ▄███▄██▀▀██▀▀██  ▀▀            ▀▀    ██   ██    ██            ██▀   ██▄    ██     ▄▄▄▄▄  ██████████   ███  ██▄  ██      ███[/]
+  [bold #6B8998]   ████▀███████████   ██████████████    ██▀   ██    ██   ██████  ▄██▄▄▄▄███    ██▄    ▀▀▀██  ███          ███   ▀██ ██      ███[/]
+  [bold #6B8998]     ██  ▀▀  ██  ▀▀     █▄  ██  ▄█      ██    ██    ██           ██▀▀▀▀▀▀███   ▀██▄      ██  ███          ███    ▀████      ███[/]
+  [bold #516E7D]     ██      ██       ▄██   ██   ██▄▄  ██▀    ▀▀    ██          ███       ██▄   ▀███▄▄▄▄███  ███▄▄▄▄▄▄▄   ███     ▀███      ███[/]
+  [bold #516E7D]     ██      ██      ▀▀   ███▀     ▀▀  ▀▀           ▀▀         ▀▀▀        ▀▀▀      ▀▀▀▀▀▀    ▀▀▀▀▀▀▀▀▀▀   ▀▀▀      ▀▀▀      ▀▀▀[/]
+
+# Hokusai's Great Wave off Kanagawa — palette-quantized braille.
+# Replace freely; kanji caption is 神奈川沖浪裏 (Under the Wave off Kanagawa).
+banner_hero: |
+  [#E1E1DE]⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀[/]
+  [#E1E1DE]⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀[/]
+  [#E1E1DE]⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀[/][#516E7D]⢀⣀[/][#6B8998]⡀[/][#516E7D]⢤⣠⣄[/][#7B958E]⢀[/][#E1E1DE]⠀[/][#6B8998]⠄[/][#E1E1DE]⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀[/]
+  [#73787D]⡃[/][#E1E1DE]⠀⠀⠀⠀⠀⠀⠀⠀⠀[/][#516E7D]⢠⣠⣴⣼⣿⣿⣾⣿⣿⣦[/][#73787D]⣀[/][#516E7D]⡀[/][#E1E1DE]⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀[/]
+  [#73787D]⠁[/][#E1E1DE]⠀[/][#8E8A80]⡀[/][#E1E1DE]⠀⠀⠀⠀⠀⠀⠀[/][#516E7D]⠘⠿⠿⣿⣿⣿⣿⣿⣿⡿⣿[/][#73787D]⡀[/][#7B958E]⠐⠈[/][#E1E1DE]⠀⠀[/][#6B8998]⢀⠠[/][#E1E1DE]⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀[/]
+  [#516E7D]⠒[/][#6B8998]⠋[/][#E1E1DE]⠀⠀⠀⠀⠀⠀⠀⠀[/][#7B958E]⢀[/][#E1E1DE]⠀⠀[/][#516E7D]⠲⠟⣻⣿⣿⣿⡏[/][#E1E1DE]⠀⠀⠀⠀⠀⠀[/][#8E8A80]⡀[/][#73787D]⢠[/][#7B958E]⠂[/][#E1E1DE]⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀[/]
+  [#7B958E]⣀[/][#E1E1DE]⠀[/][#6B8998]⢂⠐[/][#516E7D]⣶⣤⡄[/][#E1E1DE]⠀[/][#6B8998]⠁[/][#E1E1DE]⠀[/][#516E7D]⢰⣦⣤⣦⡀[/][#7B958E]⠈[/][#516E7D]⣴⣼⣿[/][#73787D]⡇[/][#E1E1DE]⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀[/][#8E8A80]⢀⠄[/][#E1E1DE]⠀[/]
+  [#516E7D]⣀⠲⣤⣤⣴⣿⡿[/][#E1E1DE]⠀[/][#516E7D]⡀⣤[/][#73787D]⡀[/][#E1E1DE]⠀[/][#73787D]⡸[/][#516E7D]⣿⣿⣿⣿⣿⣿⣧[/][#E1E1DE]⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀[/][#73787D]⣠[/][#516E7D]⣄[/][#73787D]⡔[/][#E1E1DE]⠀⠀[/][#6B8998]⢀[/]
+  [#73787D]⠉[/][#6B8998]⠂[/][#73787D]⠛[/][#516E7D]⠟⣿⣿⣿⣾⣿⣿⣿⣶⣿⣿⡿⠋[/][#E1E1DE]⠀[/][#516E7D]⠉⠛⠻⣷[/][#73787D]⣭[/][#8E8A80]⣴⣤[/][#73787D]⣾⣄⣆[/][#8E8A80]⣊[/][#73787D]⣼⣶[/][#8E8A80]⣿[/][#73787D]⣶⣶[/][#8E8A80]⣗[/][#73787D]⣶⣾⣶⣶⣿⣾⣿⣿⣶[/][#516E7D]⣶⠟[/][#8E8A80]⠁[/][#E1E1DE]⠀⠀[/][#516E7D]⣀⣴[/]
+  [#516E7D]⣤⣤⣴⡼⣶[/][#73787D]⣭⣽⣿[/][#516E7D]⠿⠿⠿⠿⠟⠁[/][#E1E1DE]⠀⠀⠀⠀⠀⠀[/][#516E7D]⠉⠻⠿⣶⣿⣿⣿⣿⣿⣿⡿⠛⠛⢿⣿⣿⣿⣿⣿⣿⠿⠿⠛⠁[/][#6B8998]⣀[/][#516E7D]⣠⣴⣿⡿⠿[/]
+  [#516E7D]⠛⠿⠿⠿⠾⠛⠛[/][#73787D]⠋[/][#516E7D]⠛⠉[/][#E1E1DE]⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀[/][#6B8998]⢀[/][#516E7D]⠙⠻⢿⣿⣿⣍⣲⣦⣴⣤⣭⣿⡟⠉⠁[/][#E1E1DE]⠀[/][#516E7D]⣀⣤⡤⠤⠛⠋⣩⠵⠚[/][#E1E1DE]⠀[/]
+  [#E1E1DE]⠀⠀[/][#6B8998]⢀[/][#E1E1DE]⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀[/][#516E7D]⣦⡗[/][#73787D]⠄[/][#516E7D]⢀[/][#6B8998]⠐[/][#516E7D]⢷⣙⣦⣰⣤⡈⠉⠉[/][#73787D]⠉[/][#E1E1DE]⠀⠀⠀[/][#516E7D]⡀[/][#73787D]⠈[/][#516E7D]⠉[/][#E1E1DE]⠀[/][#6B8998]⠡[/][#516E7D]⣴⣦⣶⠿⠛⢁⣠⣤⣾[/]
+  [#516E7D]⣠⣤⢠⣶⣤⣠⣽⠆[/][#E1E1DE]⠀⠀⠀⠀⠀⠀[/][#6B8998]⠢⣀[/][#516E7D]⢀[/][#6B8998]⡀[/][#E1E1DE]⠀[/][#516E7D]⠹⣿⣷⣝⣷⣶⣬⣙⣻⢿⣿⣶⣤⣄⡲⢦⣤⣾⣿⣷⣾⡿⠿⠛⠉[/][#6B8998]⢠⣤[/][#516E7D]⣴⠶⠶⢾[/]
+  [#516E7D]⣿⣯⣿⣿⣿⣷⣴⣶⣼⣷⡤[/][#E1E1DE]⠀⠀[/][#516E7D]⣀[/][#E1E1DE]⠀[/][#516E7D]⢙⠻⢿⣤⣄⠈⠛⢿⣿⣦⣍[/][#73787D]⡩⣛⣟[/][#8E8A80]⣀[/][#73787D]⣈⣉[/][#516E7D]⣉⣉[/][#73787D]⣙⡚⠛[/][#516E7D]⠓⢃⣉⣠⣔⣶⣶⡶⠶⠾⠟⠛⠛[/]
+  [bold #73787D]                  神 奈 川 沖 浪 裏[/]
+  [dim #8E8A80]                  The Great Wave · 葛飾北斎[/]

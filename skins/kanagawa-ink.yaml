@@ -1,0 +1,97 @@
+name: kanagawa-ink
+description: Kanagawa Paper (Ink) — dark theme matching upstream kanagawa-paper.nvim ink variant (sumiInk3 background with dragon palette accents)
+
+# Palette reference (upstream kanagawa-paper ink):
+#   sumiInk3 bg   #1F1F28   sumiInk1     #181820
+#   sumiInk4      #2A2A37   sumiInk5     #363646   sumiInk6 #54546D
+#   fujiWhite     #DCD7BA   oldWhite     #C8C093   fujiGray #727169
+#   dragonYellow  #C4B28A   dragonOrange #B6927B   dragonRed #C4746E
+#   dragonGreen   #699469   dragonAqua   #8EA49E   waveAqua1 #6A9589
+#   dragonBlue    #658594   dragonBlue5  #435965   dragonViolet #8992A7
+#   dragonPink    #A292A3   springViolet1 #938AA9
+#   dragonGray2   #9E9B93   dragonBlack5 #393836
+
+colors:
+  # Banner — fuji-white calligraphy with dragonYellow seal + dragonRed accent
+  banner_border: "#658594"      # dragonBlue
+  banner_title:  "#DCD7BA"      # fujiWhite
+  banner_accent: "#C4B28A"      # dragonYellow (primary ink accent)
+  banner_dim:    "#727169"      # fujiGray
+  banner_text:   "#DCD7BA"
+
+  # Core UI
+  ui_accent: "#658594"          # dragonBlue
+  ui_label:  "#8992A7"          # dragonViolet
+  ui_ok:     "#699469"          # dragonGreen
+  ui_error:  "#C4746E"          # dragonRed
+  ui_warn:   "#C4B28A"          # dragonYellow
+
+  # Prompt + rules
+  prompt:          "#DCD7BA"
+  input_rule:      "#54546D"    # sumiInk6
+  response_border: "#658594"
+
+  # Session header
+  session_label:  "#658594"
+  session_border: "#727169"
+
+  # Status bar (sumiInk4 panel above sumiInk3 bg)
+  status_bar_bg:       "#2A2A37"
+  status_bar_text:     "#DCD7BA"
+  status_bar_strong:   "#C4B28A"
+  status_bar_dim:      "#54546D"
+  status_bar_good:     "#699469"
+  status_bar_warn:     "#C4B28A"
+  status_bar_bad:      "#C4746E"
+  status_bar_critical: "#C4746E"
+
+  # Voice / completion menus
+  voice_status_bg:                  "#2A2A37"
+  completion_menu_bg:               "#181820"
+  completion_menu_current_bg:       "#2A2A37"
+  completion_menu_meta_bg:          "#16161D"
+  completion_menu_meta_current_bg:  "#363646"
+
+spinner: {}
+
+branding:
+  agent_name: "Hermes Agent"
+  welcome: "ようこそ — Kanagawa Paper · Ink. Type your message or /help."
+  goodbye: "またね 〜 ⚕"
+  response_label: " ⚕ Hermes "
+  prompt_symbol: "❯ "
+  help_header: "(^_^)? Available Commands"
+
+tool_prefix: "┊"
+
+# Block-letter banner — 神奈川-AGENT (Kanagawa Agent)
+banner_logo: |
+  [bold #DCD7BA]     ██      ██            ▄█▀           ▄▄         ▄▄               ▄▄▄           ▄▄▄▄▄     ▄▄▄▄▄▄▄▄▄▄   ▄▄▄       ▄▄ ▄▄▄▄▄▄▄▄▄▄▄▄[/]
+  [bold #DCD7BA]   ▄▄██▄▄▄▄▄▄██▄▄▄▄  ████████████████    ██   ██    ██              ████▄       ▄███▀▀▀███   ███▀▀▀▀▀▀▀   ████      ██ ▀▀▀▀▀███▀▀▀▀[/]
+  [bold #DCD7BA]   ▀▀▀▀████▀▀██▀▀██     ▄██▀  ▀██▄       ██   ██    ██             ▄██ ██      ▄██▀     ▀█▀  ███          █████▄    ██      ███[/]
+  [bold #DCD7BA]      ██ ██▄▄██▄▄██  ▄▄█████████████▄    ██   ██    ██             ██  ███     ███           ███          ███ ██▄   ██      ███[/]
+  [bold #8EA49E]    ▄███▄██▀▀██▀▀██  ▀▀            ▀▀    ██   ██    ██            ██▀   ██▄    ██     ▄▄▄▄▄  ██████████   ███  ██▄  ██      ███[/]
+  [bold #8EA49E]   ████▀███████████   ██████████████    ██▀   ██    ██   ██████  ▄██▄▄▄▄███    ██▄    ▀▀▀██  ███          ███   ▀██ ██      ███[/]
+  [bold #8EA49E]     ██  ▀▀  ██  ▀▀     █▄  ██  ▄█      ██    ██    ██           ██▀▀▀▀▀▀███   ▀██▄      ██  ███          ███    ▀████      ███[/]
+  [bold #658594]     ██      ██       ▄██   ██   ██▄▄  ██▀    ▀▀    ██          ███       ██▄   ▀███▄▄▄▄███  ███▄▄▄▄▄▄▄   ███     ▀███      ███[/]
+  [bold #658594]     ██      ██      ▀▀   ███▀     ▀▀  ▀▀           ▀▀         ▀▀▀        ▀▀▀      ▀▀▀▀▀▀    ▀▀▀▀▀▀▀▀▀▀   ▀▀▀      ▀▀▀      ▀▀▀[/]
+
+# Hokusai's Great Wave off Kanagawa — palette-quantized braille.
+# Replace freely; kanji caption is 神奈川沖浪裏 (Under the Wave off Kanagawa).
+banner_hero: |
+  [#1F1F28]⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀[/]
+  [#1F1F28]⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀[/]
+  [#1F1F28]⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀[/][#C8C093]⢀[/][#8EA49E]⣀[/][#727169]⡀[/][#8EA49E]⢤[/][#C8C093]⣠⣄[/][#727169]⢀[/][#1F1F28]⠀[/][#727169]⠄[/][#1F1F28]⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀[/]
+  [#6A9589]⡃[/][#1F1F28]⠀⠀⠀⠀⠀⠀⠀⠀⠀[/][#C8C093]⢠⣠⣴⣼[/][#DCD7BA]⣿⣿⣾⣿⣿[/][#C8C093]⣦[/][#8EA49E]⣀[/][#C8C093]⡀[/][#1F1F28]⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀[/]
+  [#8EA49E]⠁[/][#1F1F28]⠀[/][#727169]⡀[/][#1F1F28]⠀⠀⠀⠀⠀⠀⠀[/][#DCD7BA]⠘⠿⠿[/][#C8C093]⣿⣿⣿[/][#DCD7BA]⣿[/][#C8C093]⣿[/][#DCD7BA]⣿⡿[/][#C8C093]⣿[/][#727169]⡀⠐⠈[/][#1F1F28]⠀⠀[/][#727169]⢀⠠[/][#1F1F28]⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀[/]
+  [#C8C093]⠒[/][#727169]⠋[/][#1F1F28]⠀⠀⠀⠀⠀⠀⠀⠀[/][#727169]⢀[/][#1F1F28]⠀⠀[/][#C8C093]⠲[/][#DCD7BA]⠟[/][#C8C093]⣻⣿[/][#DCD7BA]⣿[/][#C8C093]⣿[/][#727169]⡏[/][#1F1F28]⠀⠀⠀⠀⠀⠀[/][#727169]⡀[/][#8EA49E]⢠[/][#727169]⠂[/][#1F1F28]⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀[/]
+  [#727169]⣀[/][#1F1F28]⠀[/][#727169]⢂⠐[/][#C8C093]⣶⣤[/][#DCD7BA]⡄[/][#1F1F28]⠀[/][#727169]⠁[/][#1F1F28]⠀[/][#C8C093]⢰⣦⣤⣦⡀[/][#727169]⠈[/][#8EA49E]⣴[/][#C8C093]⣼⣿[/][#8EA49E]⡇[/][#1F1F28]⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀[/][#727169]⢀⠄[/][#1F1F28]⠀[/]
+  [#C8C093]⣀⠲[/][#DCD7BA]⣤[/][#C8C093]⣤⣴⣿⡿[/][#1F1F28]⠀[/][#C8C093]⡀⣤[/][#8EA49E]⡀[/][#1F1F28]⠀[/][#727169]⡸[/][#C8C093]⣿⣿[/][#DCD7BA]⣿[/][#C8C093]⣿[/][#DCD7BA]⣿⣿[/][#C8C093]⣧[/][#1F1F28]⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀[/][#6A9589]⣠[/][#8EA49E]⣄⡔[/][#1F1F28]⠀⠀[/][#727169]⢀[/]
+  [#8EA49E]⠉[/][#727169]⠂[/][#8EA49E]⠛[/][#C8C093]⠟⣿⣿⣿⣾⣿⣿⣿⣶⣿⣿⡿[/][#8EA49E]⠋[/][#1F1F28]⠀[/][#DCD7BA]⠉[/][#C8C093]⠛[/][#DCD7BA]⠻[/][#C8C093]⣷[/][#6A9589]⣭[/][#658594]⣴⣤⣾[/][#8EA49E]⣄[/][#658594]⣆⣊⣼[/][#6A9589]⣶[/][#658594]⣿⣶⣶⣗⣶⣾⣶⣶⣿⣾⣿[/][#6A9589]⣿[/][#8EA49E]⣶[/][#C8C093]⣶⠟[/][#658594]⠁[/][#1F1F28]⠀⠀[/][#8EA49E]⣀[/][#C8C093]⣴[/]
+  [#C8C093]⣤⣤⣴[/][#8EA49E]⡼⣶⣭⣽⣿⠿[/][#C8C093]⠿⠿⠿⠟[/][#DCD7BA]⠁[/][#1F1F28]⠀⠀⠀⠀⠀⠀[/][#C8C093]⠉⠻⠿[/][#8EA49E]⣶[/][#C8C093]⣿⣿⣿⣿⣿[/][#DCD7BA]⣿[/][#8EA49E]⡿⠛⠛[/][#C8C093]⢿[/][#DCD7BA]⣿⣿⣿⣿⣿⣿[/][#8EA49E]⠿⠿[/][#C8C093]⠛[/][#DCD7BA]⠁[/][#727169]⣀[/][#C8C093]⣠⣴[/][#DCD7BA]⣿⡿[/][#C8C093]⠿[/]
+  [#DCD7BA]⠛[/][#C8C093]⠿[/][#DCD7BA]⠿⠿[/][#8EA49E]⠾⠛⠛⠋⠛⠉[/][#1F1F28]⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀[/][#727169]⢀[/][#8EA49E]⠙[/][#DCD7BA]⠻⢿⣿[/][#C8C093]⣿⣍⣲[/][#DCD7BA]⣦[/][#C8C093]⣴[/][#DCD7BA]⣤[/][#8EA49E]⣭[/][#DCD7BA]⣿[/][#8EA49E]⡟[/][#DCD7BA]⠉[/][#8EA49E]⠁[/][#1F1F28]⠀[/][#C8C093]⣀[/][#8EA49E]⣤⡤⠤[/][#C8C093]⠛⠋⣩⠵[/][#8EA49E]⠚[/][#1F1F28]⠀[/]
+  [#1F1F28]⠀⠀[/][#727169]⢀[/][#1F1F28]⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀[/][#C8C093]⣦[/][#8EA49E]⡗[/][#727169]⠄⢀⠐[/][#C8C093]⢷[/][#8EA49E]⣙[/][#C8C093]⣦⣰⣤[/][#8EA49E]⡈[/][#C8C093]⠉⠉[/][#658594]⠉[/][#1F1F28]⠀⠀⠀[/][#8EA49E]⡀⠈⠉[/][#1F1F28]⠀[/][#727169]⠡[/][#8EA49E]⣴[/][#C8C093]⣦⣶⠿⠛[/][#8EA49E]⢁[/][#C8C093]⣠⣤⣾[/]
+  [#C8C093]⣠⣤⢠⣶⣤⣠⣽[/][#8EA49E]⠆[/][#1F1F28]⠀⠀⠀⠀⠀⠀[/][#727169]⠢⣀[/][#C8C093]⢀[/][#727169]⡀[/][#1F1F28]⠀[/][#C8C093]⠹⣿⣷[/][#8EA49E]⣝⣷⣶⣬[/][#C8C093]⣙⣻⢿⣿[/][#DCD7BA]⣶⣤[/][#C8C093]⣄⡲⢦⣤⣾⣿⣷⣾⡿⠿⠛⠉[/][#727169]⢠⣤[/][#8EA49E]⣴[/][#C8C093]⠶⠶⢾[/]
+  [#C8C093]⣿⣯⣿⣿⣿⣷⣴⣶⣼⣷⡤[/][#1F1F28]⠀⠀[/][#C8C093]⣀[/][#1F1F28]⠀[/][#C8C093]⢙⠻⢿[/][#8EA49E]⣤[/][#C8C093]⣄⠈⠛⢿⣿[/][#DCD7BA]⣦[/][#8EA49E]⣍⡩⣛⣟[/][#658594]⣀⣈[/][#8EA49E]⣉⣉[/][#C8C093]⣉[/][#8EA49E]⣙[/][#6A9589]⡚[/][#8EA49E]⠛⠓[/][#C8C093]⢃⣉⣠⣔⣶⣶⡶[/][#DCD7BA]⠶[/][#C8C093]⠾⠟[/][#DCD7BA]⠛⠛[/]
+  [bold #DCD7BA]                  神 奈 川 沖 浪 裏[/]
+  [dim #54546D]                  The Great Wave · 葛飾北斎[/]
