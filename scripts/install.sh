@@ -23,7 +23,11 @@ echo "Installing CLI skins -> $SKINS_DEST"
 for skin in kanagawa-canvas kanagawa-ink; do
   src="$ROOT/skins/$skin.yaml"
   dst="$SKINS_DEST/$skin.yaml"
-  cp "$src" "$dst"
+  # `cat > dst` instead of `cp` — cp on macOS exits 1 when source and dest
+  # are the same file (e.g. when HERMES_HOME is symlinked into this repo,
+  # or when re-running after a no-op install). With `set -e` that aborts
+  # the whole script. cat handles identical-file case gracefully.
+  cat "$src" > "$dst"
   echo "  $skin"
 done
 
@@ -31,7 +35,7 @@ echo "Installing dashboard themes -> $THEMES_DEST"
 for theme in kanagawa-canvas kanagawa-ink; do
   src="$ROOT/dashboard-themes/$theme.yaml"
   dst="$THEMES_DEST/$theme.yaml"
-  cp "$src" "$dst"
+  cat "$src" > "$dst"
   echo "  $theme"
 done
 
