@@ -1,34 +1,57 @@
 #!/usr/bin/env bash
-# Install the kanagawa-canvas and kanagawa-ink skins into your Hermes profile.
+# Install the kanagawa-canvas and kanagawa-ink skins/themes into your Hermes profile.
 # Idempotent: re-running just refreshes the YAML files.
 #
+# What gets installed:
+#   - CLI skins   -> $HERMES_HOME/skins/         (terminal banner, prompt, status bar)
+#   - Web themes  -> $HERMES_HOME/dashboard-themes/  (web UI palette + fonts)
+#
 # Usage:
-#   ./scripts/install.sh            # installs into $HERMES_HOME/skins (or ~/.hermes/skins)
+#   ./scripts/install.sh            # installs into $HERMES_HOME (or ~/.hermes)
 #   HERMES_HOME=/path ./scripts/install.sh
 
 set -euo pipefail
 
 ROOT="$(cd "$(dirname "${BASH_SOURCE[0]}")/.." && pwd)"
-DEST="${HERMES_HOME:-$HOME/.hermes}/skins"
+HOME_DIR="${HERMES_HOME:-$HOME/.hermes}"
+SKINS_DEST="$HOME_DIR/skins"
+THEMES_DEST="$HOME_DIR/dashboard-themes"
 
-mkdir -p "$DEST"
+mkdir -p "$SKINS_DEST" "$THEMES_DEST"
 
+echo "Installing CLI skins -> $SKINS_DEST"
 for skin in kanagawa-canvas kanagawa-ink; do
   src="$ROOT/skins/$skin.yaml"
-  dst="$DEST/$skin.yaml"
+  dst="$SKINS_DEST/$skin.yaml"
   cp "$src" "$dst"
-  echo "installed $skin -> $dst"
+  echo "  $skin"
+done
+
+echo "Installing dashboard themes -> $THEMES_DEST"
+for theme in kanagawa-canvas kanagawa-ink; do
+  src="$ROOT/dashboard-themes/$theme.yaml"
+  dst="$THEMES_DEST/$theme.yaml"
+  cp "$src" "$dst"
+  echo "  $theme"
 done
 
 cat <<'EOF'
 
-Installed. To activate:
+Installed.
 
+CLI:
   /skin kanagawa-canvas      # light · canvas variant
-  /skin kanagawa-ink        # dark  · ink variant
+  /skin kanagawa-ink         # dark  · ink variant
 
-Or set as default in ~/.hermes/config.yaml:
+  Or set as default in ~/.hermes/config.yaml:
+    display:
+      skin: kanagawa-ink
 
-  display:
-    skin: kanagawa-ink
+Web dashboard:
+  Open the theme picker in the dashboard UI and pick "Kanagawa Canvas"
+  (light) or "Kanagawa Ink" (dark).
+
+  Or set as default in ~/.hermes/config.yaml:
+    dashboard:
+      theme: kanagawa-ink
 EOF

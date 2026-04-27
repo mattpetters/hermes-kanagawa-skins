@@ -1,19 +1,25 @@
 # hermes-kanagawa-skins
 
-Two [Hermes Agent](https://github.com/NousResearch/hermes-agent) CLI skins
+Two [Hermes Agent](https://github.com/NousResearch/hermes-agent) themes
 inspired by Hokusai's *Great Wave off Kanagawa* and the
 [`kanagawa-paper.nvim`](https://github.com/thesimonho/kanagawa-paper.nvim)
-colorscheme.
+colorscheme — covering both the **CLI skin** (banner, prompt, status bar) and
+the **web dashboard theme** (palette, fonts, accents) so the terminal and
+browser look like the same product.
 
 - **`kanagawa-ink`** — dark theme. Sumi-ink background (`#1F1F28`), `dragonYellow`
   primary accent, fuji-white text.
 - **`kanagawa-canvas`** — light theme. Canvas off-white background (`#E1E1DE`),
   muted teal accent (`canvasTeal1`), ink-toned text.
 
+The web dashboard themes also ship Geist + Geist Mono via Google Fonts,
+overriding the Nous DS's display fonts (Mondwest / Rules Expanded) for a
+cleaner reading experience.
+
 ![kanagawa-ink](assets/screenshots/kanagawa-ink.svg)
 ![kanagawa-canvas](assets/screenshots/kanagawa-canvas.svg)
 
-Each skin ships with two pieces of custom ASCII art:
+Each CLI skin ships with two pieces of custom ASCII art:
 
 1. **`banner_logo`** — block-letter banner reading **神奈川-AGENT** with a
    3-stop vertical color gradient.
@@ -28,8 +34,12 @@ and hero feel unified.
 ```bash
 git clone https://github.com/mattpetters/hermes-kanagawa-skins.git
 cd hermes-kanagawa-skins
-./scripts/install.sh        # copies skins to $HERMES_HOME/skins (or ~/.hermes/skins)
+./scripts/install.sh        # installs CLI skins AND web dashboard themes
 ```
+
+The script copies:
+- `skins/*.yaml` -> `$HERMES_HOME/skins/` (CLI)
+- `dashboard-themes/*.yaml` -> `$HERMES_HOME/dashboard-themes/` (web UI)
 
 Then activate:
 

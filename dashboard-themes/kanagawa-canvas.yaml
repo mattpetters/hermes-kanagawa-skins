@@ -1,0 +1,73 @@
+name: kanagawa-canvas
+label: Kanagawa Canvas
+description: Light · cool off-white canvas with muted teal accents — kanagawa-paper canvas variant
+
+# Palette references mirror the CLI skin (skins/kanagawa-canvas.yaml) so the
+# terminal and web dashboard look like the same theme. See docs/PALETTE.md.
+
+palette:
+  # Deepest canvas color — sits behind everything.
+  background:
+    hex: "#E1E1DE"          # canvas bg
+    alpha: 1
+  # Primary text + accent. Most UI chrome reads from here.
+  midground:
+    hex: "#3A3D42"          # ink-darkened canvasGray3 — readable on cream
+    alpha: 1
+  # Top-layer highlight. White @ 0 keeps the cascade behaviour matching builtins.
+  foreground:
+    hex: "#ffffff"
+    alpha: 0
+  # Warm vignette — softened akafuji red, very subtle on light bg.
+  warmGlow: "rgba(194, 118, 114, 0.18)"
+  # Light themes need much less noise to stay clean.
+  noiseOpacity: 0.35
+
+typography:
+  fontSans: '"Geist", system-ui, -apple-system, "Segoe UI", Roboto, sans-serif'
+  fontMono: '"Geist Mono", "JetBrains Mono", ui-monospace, "SF Mono", Menlo, monospace'
+  fontDisplay: '"Geist", system-ui, sans-serif'
+  fontUrl: "https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600;700&family=Geist+Mono:wght@400;500;700&display=swap"
+  baseSize: "15px"
+  lineHeight: "1.6"
+  letterSpacing: "-0.005em"
+
+layout:
+  radius: "0.5rem"
+  density: "comfortable"
+
+# Override the Nous DS font CSS variables — without these, the dashboard chrome
+# (nav, headings, branding) renders in Mondwest / Rules Expanded display fonts
+# regardless of `typography.fontSans`. Routing those vars through Geist makes
+# the whole UI visually consistent.
+customCSS: |
+  :root {
+    --font-sans: "Geist", system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+    --font-mono: "Geist Mono", "JetBrains Mono", ui-monospace, "SF Mono", Menlo, monospace;
+    --font-mondwest: "Geist", system-ui, sans-serif;
+    --font-rules-expanded: "Geist", system-ui, sans-serif;
+    --font-rules-compressed: "Geist", system-ui, sans-serif;
+  }
+  /* "Collapse" is referenced by direct family name in some DS components.
+     The :where() wrapper keeps specificity at 0 so theme-default selectors
+     still win where they should. */
+  :where([style*="Collapse"], [class*="collapse"]) {
+    font-family: "Geist", system-ui, sans-serif;
+  }
+
+# Pin a few shadcn tokens to specific kanagawa hues so accents stay
+# on-palette instead of the DS's color-mix derivations leaning grey.
+colorOverrides:
+  primary: "#7E8FAF"          # canvasTeal1
+  primaryForeground: "#E1E1DE"
+  accent: "#7E8FAF"
+  accentForeground: "#E1E1DE"
+  ring: "#7E8FAF"
+  destructive: "#C27672"      # canvasRed1 (akafuji)
+  destructiveForeground: "#E1E1DE"
+  success: "#7A8C6A"          # canvasGreen2
+  warning: "#B28D77"          # canvasOrange1
+  border: "#AEAEA6"           # canvasGray1
+  input: "#D8D8D2"            # bg_dim
+  muted: "#D1CFC5"            # bg_statusline
+  mutedForeground: "#73787D"  # canvasGray3
