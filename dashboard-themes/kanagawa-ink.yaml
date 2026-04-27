@@ -1,0 +1,70 @@
+name: kanagawa-ink
+label: Kanagawa Ink
+description: Dark · sumiInk3 background with dragon palette accents — kanagawa-paper ink variant
+
+# Palette references mirror the CLI skin (skins/kanagawa-ink.yaml) so the
+# terminal and web dashboard look like the same theme. See docs/PALETTE.md.
+
+palette:
+  # sumiInk3 — the canonical kanagawa-paper ink background.
+  background:
+    hex: "#1F1F28"
+    alpha: 1
+  # fujiWhite — primary text/foreground accent.
+  midground:
+    hex: "#DCD7BA"
+    alpha: 1
+  # Top highlight kept at alpha 0 to mirror builtin behaviour.
+  foreground:
+    hex: "#ffffff"
+    alpha: 0
+  # Dragon-yellow warm vignette — pulls the dark canvas toward firelight.
+  warmGlow: "rgba(196, 178, 138, 0.22)"
+  # Slightly subdued noise — ink is already moody enough.
+  noiseOpacity: 0.7
+
+typography:
+  fontSans: '"Geist", system-ui, -apple-system, "Segoe UI", Roboto, sans-serif'
+  fontMono: '"Geist Mono", "JetBrains Mono", ui-monospace, "SF Mono", Menlo, monospace'
+  fontDisplay: '"Geist", system-ui, sans-serif'
+  fontUrl: "https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600;700&family=Geist+Mono:wght@400;500;700&display=swap"
+  baseSize: "15px"
+  lineHeight: "1.6"
+  letterSpacing: "-0.005em"
+
+layout:
+  radius: "0.5rem"
+  density: "comfortable"
+
+# Override the Nous DS font CSS variables — without these, the dashboard chrome
+# (nav, headings, branding) renders in Mondwest / Rules Expanded display fonts
+# regardless of `typography.fontSans`. Routing those vars through Geist makes
+# the whole UI visually consistent.
+customCSS: |
+  :root {
+    --font-sans: "Geist", system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+    --font-mono: "Geist Mono", "JetBrains Mono", ui-monospace, "SF Mono", Menlo, monospace;
+    --font-mondwest: "Geist", system-ui, sans-serif;
+    --font-rules-expanded: "Geist", system-ui, sans-serif;
+    --font-rules-compressed: "Geist", system-ui, sans-serif;
+  }
+  :where([style*="Collapse"], [class*="collapse"]) {
+    font-family: "Geist", system-ui, sans-serif;
+  }
+
+# Pin shadcn tokens to dragon palette so accents read as kanagawa rather
+# than DS-derived greys.
+colorOverrides:
+  primary: "#658594"          # dragonBlue
+  primaryForeground: "#1F1F28"
+  accent: "#C4B28A"           # dragonYellow
+  accentForeground: "#1F1F28"
+  ring: "#658594"
+  destructive: "#C4746E"      # dragonRed
+  destructiveForeground: "#1F1F28"
+  success: "#699469"          # dragonGreen
+  warning: "#C4B28A"          # dragonYellow
+  border: "#363646"           # sumiInk5
+  input: "#2A2A37"            # sumiInk4
+  muted: "#2A2A37"            # sumiInk4
+  mutedForeground: "#9E9B93"  # dragonGray2
