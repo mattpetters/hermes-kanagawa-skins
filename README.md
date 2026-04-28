@@ -3,9 +3,9 @@
 Two [Hermes Agent](https://github.com/NousResearch/hermes-agent) themes
 inspired by Hokusai's *Great Wave off Kanagawa* and the
 [`kanagawa-paper.nvim`](https://github.com/thesimonho/kanagawa-paper.nvim)
-colorscheme — covering both the **CLI skin** (banner, prompt, status bar) and
-the **web dashboard theme** (palette, fonts, accents) so the terminal and
-browser look like the same product.
+colorscheme — covering the **CLI skin** (banner, prompt, status bar), the
+**web dashboard theme** (palette, fonts, accents), and matching **Warp custom
+themes** so the terminal and browser look like the same product.
 
 - **`kanagawa-ink`** — dark theme. Sumi-ink background (`#1F1F28`), `dragonYellow`
   primary accent, fuji-white text.
@@ -34,12 +34,13 @@ and hero feel unified.
 ```bash
 git clone https://github.com/mattpetters/hermes-kanagawa-skins.git
 cd hermes-kanagawa-skins
-./scripts/install.sh        # installs CLI skins AND web dashboard themes
+./scripts/install.sh        # installs CLI skins, dashboard themes, and Warp themes
 ```
 
 The script copies:
 - `skins/*.yaml` -> `$HERMES_HOME/skins/` (CLI)
 - `dashboard-themes/*.yaml` -> `$HERMES_HOME/dashboard-themes/` (web UI)
+- `warp-themes/*.yaml` -> `$HOME/.warp/themes/` (Warp terminal)
 
 Then activate:
 
@@ -54,6 +55,14 @@ display:
   skin: kanagawa-ink
 ```
 
+In Warp, open **Settings** > **Appearance** > **Themes** and pick
+`Kanagawa Canvas` or `Kanagawa Ink`.
+
+If you enable **Sync with OS**, set:
+
+- light mode -> `Kanagawa Canvas`
+- dark mode -> `Kanagawa Ink`
+
 ## Pair with Ghostty
 
 These skins were tuned to match the upstream Ghostty themes shipped by
@@ -63,6 +72,17 @@ These skins were tuned to match the upstream Ghostty themes shipped by
 # ~/.config/ghostty/config
 theme = dark:kanagawa-paper-ink,light:kanagawa-paper-canvas
 ```
+
+## Pair with Warp
+
+These Warp custom themes mirror the same canvas/ink palettes used by the
+Hermes skins and follow Warp's custom theme YAML schema.
+
+Copy either file from `warp-themes/` into `~/.warp/themes/`, or run
+`./scripts/install.sh` to install both:
+
+- `warp-themes/kanagawa-canvas.yaml` — light / `details: lighter`
+- `warp-themes/kanagawa-ink.yaml` — dark / `details: darker`
 
 ## What it looks like
 
@@ -82,8 +102,11 @@ python3 scripts/render_screenshots.py
 ├── skins/
 │   ├── kanagawa-ink.yaml         # dark variant
 │   └── kanagawa-canvas.yaml       # light variant
+├── warp-themes/
+│   ├── kanagawa-ink.yaml         # Warp dark theme
+│   └── kanagawa-canvas.yaml      # Warp light theme
 ├── scripts/
-│   ├── install.sh                # copy skins into $HERMES_HOME/skins
+│   ├── install.sh                # copy Hermes + Warp themes into place
 │   ├── regenerate.sh             # full pipeline: hero + logo + inject
 │   ├── generate_hero.py          # quantize Hokusai image to braille per palette
 │   ├── generate_logo.py          # half-block kanji banner with gradient

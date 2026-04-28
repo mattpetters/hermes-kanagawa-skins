@@ -1,0 +1,25 @@
+name: Kanagawa Ink
+accent: '#C4B28A'
+cursor: '#C4B28A'
+background: '#1F1F28'
+foreground: '#DCD7BA'
+details: darker
+terminal_colors:
+  bright:
+    black: '#ACA9A4'
+    blue: '#698A9B'
+    cyan: '#96ADA7'
+    green: '#72A072'
+    magenta: '#B4A7B5'
+    red: '#CC928E'
+    white: '#D5CD9D'
+    yellow: '#D4C196'
+  normal:
+    black: '#393836'
+    blue: '#435965'
+    cyan: '#8EA49E'
+    green: '#699469'
+    magenta: '#A292A3'
+    red: '#C4746E'
+    white: '#C8C093'
+    yellow: '#C4B28A'

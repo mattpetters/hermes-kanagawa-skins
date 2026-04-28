@@ -1,0 +1,25 @@
+name: Kanagawa Canvas
+accent: '#7E8FAF'
+cursor: '#7E8FAF'
+background: '#E1E1DE'
+foreground: '#73787D'
+details: lighter
+terminal_colors:
+  bright:
+    black: '#99958A'
+    blue: '#91B0BD'
+    cyan: '#8A9AB8'
+    green: '#84A098'
+    magenta: '#A989A3'
+    red: '#C68582'
+    white: '#B6B6AE'
+    yellow: '#B29F71'
+  normal:
+    black: '#8E8A80'
+    blue: '#809BA7'
+    cyan: '#7E8FAF'
+    green: '#7B958E'
+    magenta: '#9E7E98'
+    red: '#C27672'
+    white: '#AEAEA6'
+    yellow: '#A7956A'
