@@ -53,7 +53,7 @@ for theme in kanagawa-canvas kanagawa-ink; do
 done
 
 echo "Installing Warp themes -> $WARP_THEMES_DEST"
-for theme in kanagawa-canvas kanagawa-ink; do
+for theme in kanagawa-canvas kanagawa-canvas-lighter kanagawa-canvas-bright kanagawa-ink; do
   src="$ROOT/warp-themes/$theme.yaml"
   dst="$WARP_THEMES_DEST/$theme.yaml"
   copy_theme_file "$src" "$dst" "$theme"
@@ -80,10 +80,10 @@ Web dashboard:
       theme: kanagawa-ink
 
 Warp:
-  Open Settings > Appearance > Themes and pick "Kanagawa Canvas"
-  (light) or "Kanagawa Ink" (dark).
+  Open Settings > Appearance > Themes and pick "Kanagawa Canvas",
+  "Kanagawa Canvas Lighter", "Kanagawa Canvas Bright", or "Kanagawa Ink".
 
   If Sync with OS is enabled:
-    light mode -> Kanagawa Canvas
+    light mode -> pick your preferred Canvas variant
     dark mode  -> Kanagawa Ink
 EOF

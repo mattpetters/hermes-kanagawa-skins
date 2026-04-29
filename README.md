@@ -11,6 +11,8 @@ themes** so the terminal and browser look like the same product.
   primary accent, fuji-white text.
 - **`kanagawa-canvas`** — light theme. Canvas off-white background (`#E1E1DE`),
   muted teal accent (`canvasTeal1`), ink-toned text.
+- **Warp-only Canvas variants** — `kanagawa-canvas-lighter` (`#E6E6E3`) and
+  `kanagawa-canvas-bright` (`#ECECE8`) for daytime A/B testing.
 
 The web dashboard themes also ship Geist + Geist Mono via Google Fonts,
 overriding the Nous DS's display fonts (Mondwest / Rules Expanded) for a
@@ -56,11 +58,12 @@ display:
 ```
 
 In Warp, open **Settings** > **Appearance** > **Themes** and pick
-`Kanagawa Canvas` or `Kanagawa Ink`.
+`Kanagawa Canvas`, `Kanagawa Canvas Lighter`, `Kanagawa Canvas Bright`,
+or `Kanagawa Ink`.
 
 If you enable **Sync with OS**, set:
 
-- light mode -> `Kanagawa Canvas`
+- light mode -> your preferred Canvas variant
 - dark mode -> `Kanagawa Ink`
 
 ## Pair with Ghostty
@@ -78,10 +81,12 @@ theme = dark:kanagawa-paper-ink,light:kanagawa-paper-canvas
 These Warp custom themes mirror the same canvas/ink palettes used by the
 Hermes skins and follow Warp's custom theme YAML schema.
 
-Copy either file from `warp-themes/` into `~/.warp/themes/`, or run
-`./scripts/install.sh` to install both:
+Copy the files from `warp-themes/` into `~/.warp/themes/`, or run
+`./scripts/install.sh` to install all of them:
 
-- `warp-themes/kanagawa-canvas.yaml` — light / `details: lighter`
+- `warp-themes/kanagawa-canvas.yaml` — base light / `#E1E1DE`
+- `warp-themes/kanagawa-canvas-lighter.yaml` — lighter / `#E6E6E3`
+- `warp-themes/kanagawa-canvas-bright.yaml` — brightest / `#ECECE8`
 - `warp-themes/kanagawa-ink.yaml` — dark / `details: darker`
 
 ## What it looks like
@@ -104,7 +109,9 @@ python3 scripts/render_screenshots.py
 │   └── kanagawa-canvas.yaml       # light variant
 ├── warp-themes/
 │   ├── kanagawa-ink.yaml         # Warp dark theme
-│   └── kanagawa-canvas.yaml      # Warp light theme
+│   ├── kanagawa-canvas.yaml      # Warp light theme (base)
+│   ├── kanagawa-canvas-lighter.yaml
+│   └── kanagawa-canvas-bright.yaml
 ├── scripts/
 │   ├── install.sh                # copy Hermes + Warp themes into place
 │   ├── regenerate.sh             # full pipeline: hero + logo + inject
